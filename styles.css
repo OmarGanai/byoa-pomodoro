@@ -1,0 +1,152 @@
+/* Theme variables */
+:root {
+    --bg-color: #fafafa;
+    --container-bg: #ffffff;
+    --text-color: #111111;
+    --text-secondary: #6b7280;
+    --border-color: rgba(0, 0, 0, 0.08);
+    --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] {
+    --bg-color: #111111;
+    --container-bg: #1a1a1a;
+    --text-color: #ffffff;
+    --text-secondary: #9ca3af;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    text-align: center;
+    background: var(--container-bg);
+    padding: 3.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    max-width: 480px;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.theme-container {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.5rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+}
+
+.theme-toggle:hover {
+    background: var(--border-color);
+    opacity: 1;
+}
+
+h1 {
+    color: var(--text-color);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
+}
+
+.timer {
+    font-size: 6rem;
+    font-weight: 600;
+    margin: 2.5rem 0;
+    color: var(--text-color);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.04em;
+}
+
+.controls {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin: 2.5rem 0;
+}
+
+.controls button {
+    font-size: 0.9375rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    letter-spacing: -0.01em;
+}
+
+.controls button:hover {
+    transform: translateY(-1px);
+}
+
+.start-btn {
+    background: #5E6AD2 !important;
+}
+
+.reset-btn {
+    background: var(--border-color) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.work-btn[data-mode="work"] {
+    background: #27AB83 !important;
+}
+
+.work-btn[data-mode="rest"] {
+    background: #DE7113 !important;
+}
+
+.work-btn[data-mode="work"]:hover {
+    background: #229974 !important;
+}
+
+.work-btn[data-mode="rest"]:hover {
+    background: #C66411 !important;
+}
+
+.mode {
+    margin-top: 2rem;
+    font-size: 0.9375rem;
+    color: var(--text-secondary);
+    font-weight: 450;
+}
+
+@media (hover: hover) {
+    .controls button:active {
+        transform: translateY(0);
+    }
+    
+    .reset-btn:hover {
+        background: #e5e7eb !important;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#000000">
+</head>
+<body>
+    <div class="container">
+        <h1>Pomodoro Timer</h1>
+        <div class="timer">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <div class="controls">
+            <button id="start" class="start-btn">Start</button>
+            <button id="reset" class="reset-btn">Reset</button>
+            <button id="work-mode" class="work-btn" data-mode="work">Rest Mode</button>
+        </div>
+        <div class="mode">
+            <span id="mode-text">Time to focus!</span>
+        </div>
+
+        <div class="theme-container">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 17.625L12 19.875M12 4.125L12 6.375M19.875 12L17.625 12M6.375 12L4.125 12M17.304 17.304L15.7695 15.7695M8.23051 8.23051L6.69601 6.69601M17.304 6.69601L15.7695 8.23051M8.23051 15.7695L6.69601 17.304M16.125 12C16.125 14.2437 14.2437 16.125 12 16.125C9.75628 16.125 7.875 14.2437 7.875 12C7.875 9.75628 9.75628 7.875 12 7.875C14.2437 7.875 16.125 9.75628 16.125 12Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
